@@ -35,6 +35,28 @@ export const NAV_LINKS = [
 	},
 ];
 
+// Products
+export const PRODUCTS = [
+    {
+		id: 1,
+		name: "Accessories",
+		path: "/",
+		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-MY23-SAL-05566-RGB-3.jpg"
+	},
+    {
+		id: 2,
+		name: "Parts & Maintenance",
+		path: "/",
+		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-AF-SDA-March-13-BottomFunnel-XPS-Care-STATIC-1x1-ENNA.jpg"
+	},
+    {
+		id: 3,
+		name: "Clothing & Gear",
+		path: "/",
+		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-MY23-GTI-13658-RGB-desk_1.jpg"
+	},
+];
+
 // Brand Logo
 
 export const BRAND_LOGOS = [
