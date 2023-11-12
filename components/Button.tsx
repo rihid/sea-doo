@@ -11,7 +11,7 @@ function Button({type, label, children}: ButtonProps) {
     return (
         <button
             type={type}
-            className="inline-flex justify-center items-center py-3 px-5 text-center text-base font-medium text-white rounded-lg bg-[#FC7300] hover:bg-[#FF5B00]"
+            className="inline-flex gap-1 justify-center items-center bg-firstColor px-8 py-4 font-semibold text-whiteColor duration-300 hover:bg-firstColorAlt"
         >
             {label ? label : children}
         </button>

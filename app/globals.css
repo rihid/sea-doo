@@ -1,12 +1,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
 @tailwind utilities;
 
 :root {
   --header-height: 3rem;
 
   --first-color: hsl(190, 64%, 22%);
-  /* --first-color-second: hsl(190, 64%, 22%); */
   --first-color-alt: hsl(190, 64%, 15%);
   --title-color: hsl(190, 64%, 18%);
   --text-color: hsl(190, 24%, 35%);
@@ -281,35 +281,35 @@ input {
 
 /*=============== PRODUCT PLACE ===============*/
 
-.place__container {
+.product__container {
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
 }
 
-.place__card {
+.product__card {
   position: relative;
   overflow: hidden;
 }
 
-.place__card:hover .place__img {
+.product__card:hover .product__img {
   transform: scale(1.1);
 }
 
-.place__img {
+.product__img {
   transition: 0.3s;
 }
 
 
-.place__subtitle, .place__price {
+.product__subtitle, .product__price {
   display: block;
 }
 
-.place__subtitle {
+.product__subtitle {
   font-size: var(--smaller-font-size);
   margin-bottom: 1.25rem;
 }
 
-.place__button {
+.product__button {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -411,7 +411,7 @@ input {
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
-  .place__container {
+  .product__container {
     grid-template-columns: max-content;
     justify-content: center;
   }
@@ -419,7 +419,7 @@ input {
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
-  .place__container {
+  .product__container {
     grid-template-columns: repeat(3, max-content);
   }
   .subscribe__form {
@@ -484,7 +484,7 @@ input {
     column-gap: 2.5rem;
   }
   
-  .place__container {
+  .product__container {
     padding-top: 2rem;
   }
 
@@ -528,7 +528,7 @@ input {
     font-size: var(--h2-font-size);
   }
 
-  .place__container {
+  .product__container {
     gap: 3rem 2rem;
   }
 

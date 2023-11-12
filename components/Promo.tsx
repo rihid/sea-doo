@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 import { motion, useAnimation, useInView } from "framer-motion";
 import Image from 'next/image'
 import promos from '@/public/images/promos.jpg'
+import { Button } from '.';
 
 function Promo() {
     const ref = useRef(null);
@@ -56,7 +57,7 @@ function Promo() {
                         Sweet PWC and Switch deals</span>
                     <span className="max-w-md block text-whiteColor font-normal leading-normal tracking-wide mb-10">
                         Live more adventures on your 2024 Sea-Doo personal watercraft or Switch pontoon with 2 years of coverage. Plus, get a sweet discount on the entire 2024 accessories lineup. See details and prepare for the fun</span>
-                    <a href="#" className="button">See Promotions</a>
+                    <Button type="button" label="See Promotions" />
 
                 </motion.div>
             </div>

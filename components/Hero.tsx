@@ -52,8 +52,8 @@ function Hero() {
                     <h1 className="text-whiteColor font-medium text-[2.25rem] lg:text-[4rem] mb-3">The 2023 <br /> Lineup is Still <br /> <b>Available</b></h1>
                     <span className="max-w-md block text-whiteColor font-semibold leading-normal tracking-wide mb-10">
                         Satisfy your need for having a blast on the water with a 2023 Sea-Doo personal watercraft or pontoon</span>
-                    <a href="#" className="button">See 2023 Models</a>
-
+                    <br />
+                    <Button type="button" label="See 2023 Models"/>
                 </motion.div>
 
                 <motion.div

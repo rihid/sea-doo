@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import hero from '@/public/images/hero.jpg'
-import { CardDeal, CardProduct, CardProductLogo, Hero, Icon, Promo, Subscribetion } from '@/components'
+import { CardDeal, CardProduct, CardProductLogo, Hero, Promo, Subscribetion } from '@/components'
 
 export default function Home() {
+    
     return (
         <main className="main">
             <Hero />

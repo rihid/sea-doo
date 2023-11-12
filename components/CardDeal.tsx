@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { motion, useAnimation, useInView } from "framer-motion";
 import newProoduct from '@/public/images/new-product.jpg'
+import { Button } from '.';
 
 function CardDeal() {
     const ref = useRef(null);
@@ -58,7 +59,7 @@ function CardDeal() {
     }, [isScroll]);
 
     return (
-        <section className="section" id="about">
+        <section className="section" id="new">
             <div className="gap-10 md:gap-12 md:grid-cols-2 md:items-center container grid">
                 <motion.div
                     ref={ref}
@@ -71,7 +72,7 @@ function CardDeal() {
                     <motion.div variants={item}>
                         <p className="mb-8 leading-normal tracking-wide">The 2024 Sea-Doo lineup has it all! The next level of premium versatility arrives with a revolutionary Switch pontoon lineup. A Spark evolution delivers the ultimate in accessible fun on the water.
                         </p>
-                        <a href="#" className="button">Reserve a place</a>
+                        <Button type="button" label="Reserve a place"/>
                     </motion.div>
                 </motion.div>
 

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from 'next/image'
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Icon } from '.'
+import { Button, Icon } from '.'
 import { PRODUCTS } from "@/constants";
 
 function CardProduct() {
@@ -44,20 +44,20 @@ function CardProduct() {
             animate={productContentControls}
             initial="hidden"
             variants={productContentVariants}
-            className="place section"
-            id="place"
+            className="section"
+            id="accessories"
         >
             <h2 className="section__title">The Official Sea-Doo Accessories, <br /> Parts & Clothing</h2>
-            <motion.div variants={item} className="place__container container grid">
+            <motion.div variants={item} className="product__container container grid">
                 {PRODUCTS.map(item =>
-                    <div key={item.id} className="h-56 w-36 place__card md:h-64 md:w-44 lg:h-80 lg:w-52">
-                        <img src={item.src} alt="" className="h-56 w-36 place__img md:h-64 md:w-44 lg:h-80 lg:w-52 object-cover image-brightness" />
+                    <div key={item.id} className="h-56 w-36 product__card md:h-64 md:w-44 lg:h-80 lg:w-52">
+                        <img src={item.src} alt="" className="h-56 w-36 product__img md:h-64 md:w-44 lg:h-80 lg:w-52 object-cover image-brightness" />
 
                         <div className="absolute top-8 left-2 w-full h-full">
                             <h3 className="text-lg text-whiteColor font-semibold md:text-xl">{item.name}</h3>
                         </div>
 
-                        <button className="button button--flex place__button">
+                        <button className="button button--flex product__button">
                             <span className="text-xs md:text-sm">Shop Now</span>
                             <Icon name="icon-arrow-right" size={20} />
                         </button>

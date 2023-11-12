@@ -19,19 +19,19 @@ export const NAV_LINKS = [
 		id: 2,
 		name: "New Products",
 		path: "/",
-		slug: "products"
+		slug: "new"
 	},
     {
 		id: 3,
 		name: "Accessories",
 		path: "/",
-		slug: "about"
+		slug: "accessories"
 	},
     {
 		id: 4,
 		name: "Promos",
 		path: "/",
-		slug: "contact"
+		slug: "promo"
 	},
 ];
 
@@ -134,4 +134,70 @@ export const SOCIAL_ICONS = [
 		name: "icon-youtube",
 		path: "/",
 	},
+]
+
+export const RESOURCES = [
+	{
+		id: 1,
+		name: "Need Help",
+		path: "/",
+		href: "#"
+	},
+    {
+		id: 2,
+		name: "Safety Recalls",
+		path: "/",
+		href: "#",
+	},
+    {
+		id: 3,
+		name: "Delivery Update",
+		path: "/",
+		href: "#",
+	},
+
+]
+
+export const COMPANY = [
+	{
+		id: 1,
+		name: "Team",
+		path: "/",
+		href: "#"
+	},
+    {
+		id: 2,
+		name: "Careers",
+		path: "/",
+		href: "#",
+	},
+    {
+		id: 3,
+		name: "Become A Dealer",
+		path: "/",
+		href: "#",
+	},
+
+]
+
+export const SUPPORT = [
+	{
+		id: 1,
+		name: "FAQs",
+		path: "/",
+		href: "#"
+	},
+    {
+		id: 2,
+		name: "Support Center",
+		path: "/",
+		href: "#",
+	},
+    {
+		id: 3,
+		name: "Contact Us",
+		path: "/",
+		href: "#",
+	},
+
 ]

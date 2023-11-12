@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { SOCIAL_ICONS } from '@/constants'
+import { SOCIAL_ICONS, RESOURCES, SUPPORT, COMPANY } from '@/constants'
 import Link from 'next/link'
 import { Icon } from '.'
 
@@ -34,7 +34,7 @@ function Footer() {
     }, [isScroll]);
     return (
         <footer className="section">
-            <motion.div 
+            <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={contentVariants}
@@ -55,45 +55,34 @@ function Footer() {
                     <div className="footer__data">
                         <h3 className="footer__subtitle">Resources</h3>
                         <ul>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Need Help</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Safety Recalls</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Delivery Update</a>
-                            </li>
+                            {RESOURCES.map(item =>
+                                <li key={item.id} className="footer__item">
+                                    <Link href={item.href} className="footer__link">{item.name}</Link>
+                                </li>
+                            )}
                         </ul>
                     </div>
 
                     <div className="footer__data">
                         <h3 className="footer__subtitle">Company</h3>
                         <ul>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Team</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Careers</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Become A Dealer</a>
-                            </li>
+                            {COMPANY.map(item =>
+                                <li key={item.id} className="footer__item">
+                                    <Link href={item.href} className="footer__link">{item.name}</Link>
+                                </li>
+                            )}
+
                         </ul>
                     </div>
 
                     <div className="footer__data">
                         <h3 className="footer__subtitle">Support</h3>
                         <ul>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">FAQs</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Support Center</a>
-                            </li>
-                            <li className="footer__item">
-                                <a href="" className="footer__link">Contact Us</a>
-                            </li>
+                            {SUPPORT.map(item =>
+                                <li key={item.id} className="footer__item">
+                                    <Link href={item.href} className="footer__link">{item.name}</Link>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>

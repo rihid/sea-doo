@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { Button } from ".";
 
 export default function Subscribetion() {
     const ref = useRef(null);
@@ -67,9 +68,7 @@ export default function Subscribetion() {
                     >
                         <input type="text" placeholder="Enter email" className="subscribe__input" />
 
-                        <button className="button">
-                            Subscribe
-                        </button>
+                        <Button type="button" label="Subscribe" />
                     </motion.form>
                 </div>
             </div>

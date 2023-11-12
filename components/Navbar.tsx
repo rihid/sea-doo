@@ -19,7 +19,7 @@ export default function Navbar({isScrolled}: {isScrolled: boolean}) {
                 <ul className="flex flex-col gap-10 md:flex-row md:gap-16">
                     {NAV_LINKS.map(menu =>
                         <li key={menu.id}>
-                            <a href="#home" className={`text-textColorLight font-semibold uppercase hover:text-textColor  md:normal-case  ${isScrolled ? 'md:text-textColor' : 'md:text-whiteColor md:hover:text-whiteColor'}`}>{menu.name}</a>
+                            <Link href={`#${menu.slug}`} className={`text-textColorLight font-semibold uppercase hover:text-textColor  md:normal-case  ${isScrolled ? 'md:text-textColor' : 'md:text-whiteColor md:hover:text-whiteColor'}`}>{menu.name}</Link>
                         </li>
                     )}
                 </ul>
