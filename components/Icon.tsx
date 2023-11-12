@@ -2,6 +2,7 @@ import Image from "next/image";
 import seadooLogo from '@/public/seadoo-logo.svg'
 import seadooLogoWhite from '@/public/seadoo-white.svg'
 import IconMenu from '@/public/icon/IconMenu.svg'
+import iconMenuWhite from '@/public/icon/IconMenuWhite.svg'
 import iconClose from '@/public/icon/iconClose.svg'
 import iconArrowRight from '@/public/icon/iconArrowRight.svg'
 import iconIG from '@/public/icon/iconInstagram.svg'
@@ -22,6 +23,8 @@ function Icon({name, size}: IconProps) {
             return <Image src={seadooLogoWhite} width={size} height={size} alt={name} />
         case 'icon-menu':
             return <Image src={IconMenu} width={size} height={size} alt={name} />
+        case 'icon-menu-white':
+            return <Image src={iconMenuWhite} width={size} height={size} alt={name} />
         case 'icon-close':
             return <Image src={iconClose} width={size} height={size} alt={name} />
         case 'icon-arrow-right':

@@ -7,7 +7,8 @@ import Icon from "./Icon";
 import Image from "next/image";
 
 export default function Navbar({isScrolled}: {isScrolled: boolean}) {
-    const [isShow, setIsShow] = useState(false);
+    const [isShow, setIsShow] = useState<boolean>(false);
+    
 
     return (
         <nav className="flex h-12 md:h-[4.5rem] container items-center justify-between">
@@ -19,7 +20,7 @@ export default function Navbar({isScrolled}: {isScrolled: boolean}) {
                 <ul className="flex flex-col gap-10 md:flex-row md:gap-16">
                     {NAV_LINKS.map(menu =>
                         <li key={menu.id}>
-                            <Link href={`#${menu.slug}`} className={`text-textColorLight font-semibold uppercase hover:text-textColor  md:normal-case  ${isScrolled ? 'md:text-textColor' : 'md:text-whiteColor md:hover:text-whiteColor'}`}>{menu.name}</Link>
+                            <Link href={`#${menu.slug}`} className={`text-textColorLight font-semibold uppercase hover:text-textColor  md:normal-case  ${isScrolled ? 'md:text-textColor hover:text-firstColorAlt duration-300' : 'md:text-whiteColor md:hover:text-firstColor duration-300'}`}>{menu.name}</Link>
                         </li>
                     )}
                 </ul>
@@ -36,7 +37,7 @@ export default function Navbar({isScrolled}: {isScrolled: boolean}) {
                 className="nav__toggle" 
                 onClick={() => setIsShow(true)}
             >
-                <Icon name="icon-menu" size={24} />
+                <Icon name={isScrolled ? "icon-menu" : "icon-menu-white"} size={24} />
             </div>
         </nav>
 

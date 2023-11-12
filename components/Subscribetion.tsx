@@ -44,7 +44,7 @@ export default function Subscribetion() {
         if (isScroll) {
             promoContentControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, promoContentControls]);
     return (
         <section className="section">
             <div className="py-10 px-0 bg-none md:p-0 bg-firstColorSecond">

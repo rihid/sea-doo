@@ -9,7 +9,7 @@ function CardDeal() {
     const ref = useRef(null);
 
     const isScroll = useInView(ref, { once: true });
-    const aboutContentControls = useAnimation();
+    const dealContentControls = useAnimation();
 
     const leftContentVariants = {
         hidden: { opacity: 0, x: -12 },
@@ -54,16 +54,16 @@ function CardDeal() {
 
     useEffect(() => {
         if (isScroll) {
-            aboutContentControls.start("visible");
+            dealContentControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, dealContentControls]);
 
     return (
         <section className="section" id="new">
             <div className="gap-10 md:gap-12 md:grid-cols-2 md:items-center container grid">
                 <motion.div
                     ref={ref}
-                    animate={aboutContentControls}
+                    animate={dealContentControls}
                     initial="hidden"
                     variants={leftContentVariants}
                     className="text-center md:text-left"
@@ -78,7 +78,7 @@ function CardDeal() {
 
                 <motion.div
                     ref={ref}
-                    animate={aboutContentControls}
+                    animate={dealContentControls}
                     initial="hidden"
                     variants={rightContentVariants}
                     className="flex gap-4 items-center justify-center md:justify-end"

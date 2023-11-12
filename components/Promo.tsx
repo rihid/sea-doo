@@ -39,7 +39,7 @@ function Promo() {
         if (isScroll) {
             promoContentControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, promoContentControls]);
     return (
         <motion.section
             initial="hidden"

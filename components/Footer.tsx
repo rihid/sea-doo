@@ -9,7 +9,7 @@ function Footer() {
     const ref = useRef(null);
 
     const isScroll = useInView(ref, { once: true });
-    const promoContentControls = useAnimation();
+    const footerContentControls = useAnimation();
 
     const contentVariants = {
         hidden: {
@@ -29,9 +29,9 @@ function Footer() {
 
     useEffect(() => {
         if (isScroll) {
-            promoContentControls.start("visible");
+            footerContentControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, footerContentControls]);
     return (
         <footer className="section">
             <motion.div

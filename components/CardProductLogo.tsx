@@ -35,7 +35,7 @@ function CardProductLogo() {
         if (isScroll) {
             brandLogoControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, brandLogoControls]);
     return (
         <motion.section
             ref={ref}
@@ -51,7 +51,7 @@ function CardProductLogo() {
                     {BRAND_LOGOS.map(item =>
                         <div className="max-h-fit flex items-center justify-center" key={item.id}>
                             <Link href="#" className="">
-                                <Image src={item.name} alt='' className="w-[180px] md:w-[240px]" />
+                                <Image src={item.name} alt='' className="w-[180px] md:w-[240px] opacity-50 hover:opacity-100 duration-300" />
                             </Link>
                         </div>
                     )}

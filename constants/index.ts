@@ -6,6 +6,9 @@ import rotax from '@/public/rotax.svg'
 import aluma from '@/public/aluma.svg'
 import manitou from '@/public/manitou.svg'
 import quintrex from '@/public/quintrex.svg'
+import acessories from '@/public/images/acessories.webp'
+import clothing from '@/public/images/clothing.webp'
+import parts from '@/public/images/parts.webp'
 
 // Navigation
 export const NAV_LINKS = [
@@ -41,19 +44,19 @@ export const PRODUCTS = [
 		id: 1,
 		name: "Accessories",
 		path: "/",
-		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-MY23-SAL-05566-RGB-3.jpg"
+		src: acessories
 	},
     {
 		id: 2,
 		name: "Parts & Maintenance",
 		path: "/",
-		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-AF-SDA-March-13-BottomFunnel-XPS-Care-STATIC-1x1-ENNA.jpg"
+		src: clothing
 	},
     {
 		id: 3,
 		name: "Clothing & Gear",
 		path: "/",
-		src: "https://sea-doo-shop.brp.com/media/wysiwyg/SEA-MY23-GTI-13658-RGB-desk_1.jpg"
+		src: parts
 	},
 ];
 

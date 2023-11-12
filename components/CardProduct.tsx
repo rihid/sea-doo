@@ -36,7 +36,7 @@ function CardProduct() {
         if (isScroll) {
             productContentControls.start("visible");
         }
-    }, [isScroll]);
+    }, [isScroll, productContentControls]);
 
     return (
         <motion.section
@@ -51,7 +51,7 @@ function CardProduct() {
             <motion.div variants={item} className="product__container container grid">
                 {PRODUCTS.map(item =>
                     <div key={item.id} className="h-56 w-36 product__card md:h-64 md:w-44 lg:h-80 lg:w-52">
-                        <img src={item.src} alt="" className="h-56 w-36 product__img md:h-64 md:w-44 lg:h-80 lg:w-52 object-cover image-brightness" />
+                        <Image src={item.src} alt="" className="h-56 w-36 product__img md:h-64 md:w-44 lg:h-80 lg:w-52 object-cover image-brightness" />
 
                         <div className="absolute top-8 left-2 w-full h-full">
                             <h3 className="text-lg text-whiteColor font-semibold md:text-xl">{item.name}</h3>

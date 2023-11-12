@@ -3,17 +3,9 @@ import { useState, useEffect } from 'react'
 import { Navbar } from '.'
 
 function Header() {
-    const [isScrolled, setIsScrolled] = useState<boolean>(false)
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-    // const changeBackground = () => {
-    //     const header: any = document.querySelector('#header');
-    //     if (window.scrollY >= 100) {
-    //         header.classList.add('scroll-header')
-    //     } else {
-    //         header.classList.remove('scroll-header')
-    //     }
-    // }
-    const changeBackground = () => {
+    const changeBackground = (): void => {
         if (window.scrollY >= 100) {
             setIsScrolled(true)
         } else{
