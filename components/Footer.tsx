@@ -1,19 +1,52 @@
-import React from 'react'
+"use client";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { SOCIAL_ICONS } from '@/constants'
 import Link from 'next/link'
 import { Icon } from '.'
 
 function Footer() {
+    const ref = useRef(null);
+
+    const isScroll = useInView(ref, { once: true });
+    const promoContentControls = useAnimation();
+
+    const contentVariants = {
+        hidden: {
+            opacity: 0,
+            y: -25,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.5,
+                type: "spring",
+                stiffness: 150,
+            },
+        },
+    };
+
+    useEffect(() => {
+        if (isScroll) {
+            promoContentControls.start("visible");
+        }
+    }, [isScroll]);
     return (
         <footer className="section">
-            <div className="footer__container container grid">
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={contentVariants}
+                className="footer__container container grid"
+            >
                 <div className="footer__content grid">
                     <div className="footer__data">
                         <h3 className="footer__title">Follow Us</h3>
                         <div className="mt-4">
                             {SOCIAL_ICONS.map(item =>
                                 <Link href="#" target="_blank" className="footer__social" key={item.id}>
-                                    <Icon name={item.name} size={18}/>
+                                    <Icon name={item.name} size={18} />
                                 </Link>
                             )}
                         </div>
@@ -73,7 +106,7 @@ function Footer() {
                         <a href="#" className="footer__terms-link">Sitemap</a>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     )
 }
