@@ -72,7 +72,7 @@ function CardDeal() {
                     <motion.div variants={item}>
                         <p className="mb-8 leading-normal tracking-wide">The 2024 Sea-Doo lineup has it all! The next level of premium versatility arrives with a revolutionary Switch pontoon lineup. A Spark evolution delivers the ultimate in accessible fun on the water.
                         </p>
-                        <Button type="button" label="Reserve a place"/>
+                        <Button type="button" label="Reserve a place" />
                     </motion.div>
                 </motion.div>
 

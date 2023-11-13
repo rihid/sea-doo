@@ -13,13 +13,13 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="main">
+        <>
             <Hero />
             <CardDeal />
             <CardProduct />
             <Promo />
             <CardProductLogo />
             <Subscribetion />
-        </main>
+        </>
     )
 }
